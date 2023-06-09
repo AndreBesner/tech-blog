@@ -1,19 +1,7 @@
 const router = require("express").Router();
 const { User, Blog, Comment } = require("./../models");
-const withAuth = require(""); // fill this in once util added
+const withAuth = require('.././utils/auth'); // fill this in once util added
 
-// router.get('/', async (req, res) => {
-//     try {
-//         const blogData = await Blog.findAll({
-//             include: [
-//                 {
-//                     model: User,
-//                     attributes: ['name']
-//                 },
-//             ],
-//         })
-//     }
-// });
 
 router.get("/", async (req, res) => {
   try {
