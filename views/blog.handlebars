@@ -1,27 +1,17 @@
-<!-- Dashboard Content -->
-<div class="container mt-5">
-  <h1>My Blog</h1>
 
-  <!-- Existing Blog Posts -->
-  {{!-- {{#if blogs.length}} --}}
-  <div class="mt-4">
-    
-    <h3></h3>
-    <div class="list-group">
-      <a href="/posts/1" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">{{blog.name}}</h5>
-          <p class="mb-1">{{description}}</p>
-          <p class="mb-1">{{format_date date_created}}</p>
-        </div>
-      </a>
+
+
+
+<div class="container mt-5">
+  <div class="row headerRow">
+    <div class="col-8">
+      <h2 class="blogTitle text-uppercase">{{name}}</h2>
+    </div>
+    <div class="col-4">
+      <p class="blogCreate text-right">Created by {{user.name}} on {{format_date date_created}}</p>
     </div>
   </div>
-  {{!-- {{else}} --}}
-  {{!-- <p>NO BLOGS FOUND....YET!</p> --}}
-  {{!-- {{/if}} --}}
-
-  <!-- Add New Blog Post -->
+  <p class="text-center blogDescTwo">{{description}}</p>
 </div>
 
-<script src="js/comments.js"></script>
+<script src="js/logout.js"></script>
