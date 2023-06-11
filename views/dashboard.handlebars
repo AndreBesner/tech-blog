@@ -1,0 +1,85 @@
+{{!-- <!-- Dashboard Content -->
+<div class="container mt-5">
+  <h1>My Dashboard</h1>
+
+  <!-- Existing Blog Posts -->
+  {{#if blogs.length}}
+  <div class="mt-4">
+    {{#each blogs}}
+    <h3></h3>
+    <div class="list-group">
+      <a href="/posts/1" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{name}}</h5>
+          <p class="mb-1">{{description}}</p>
+        </div>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+  {{else}}
+  <p>NO BLOGS FOUND....YET!</p>
+  {{/if}}
+
+  <!-- Add New Blog Post -->
+  <div class="mt-4">
+    <h3>Add New Blog Post</h3>
+    <form id="new-blog">
+      <div class="mb-3">
+        <label for="blog-title" class="title form-label">Title</label>
+        <input type="text" class="contents" id="blog-title" placeholder="Enter the title">
+      </div>
+      <div class="mb-3">
+        <label for="blog-content" class="form-label">Contents</label>
+        <textarea class="form-control" id="blog-content" rows="4" placeholder="Enter the contents"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
+  </div>
+</div>
+
+  <script src="js/profile.js"></script> --}}
+
+
+
+<!-- Dashboard Content -->
+<div class="container mt-5">
+  <h1>My Dashboard</h1>
+
+  <!-- Existing Blog Posts -->
+  {{#if blogs.length}}
+  <div class="mt-4">
+    {{#each blogs}}
+    <h3></h3>
+    <div class="list-group">
+      <a href="/posts/1" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{name}}</h5>
+          <p class="mb-1">{{description}}</p>
+        </div>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+  {{else}}
+  <p>NO BLOGS FOUND....YET!</p>
+  {{/if}}
+
+  <!-- Add New Blog Post -->
+  <div class="mt-4">
+    <h3>Add New Blog Post</h3>
+    <form id="new-blog">
+      <div class="mb-3">
+        <label for="blog-title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="blog-title" placeholder="Enter the title">
+      </div>
+      <div class="mb-3">
+        <label for="blog-content" class="form-label">Contents</label>
+        <textarea class="form-control" id="blog-content" rows="4" placeholder="Enter the contents"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/profile.js"></script>
