@@ -1,7 +1,3 @@
-
-
-
-
 <div class="container mt-5">
   <div class="row headerRow">
     <div class="col-8">
@@ -11,15 +7,29 @@
       <p class="blogCreate text-right">Created by {{user.name}} on {{format_date date_created}}</p>
     </div>
   </div>
-  <p class="text-center blogDescTwo">{{description}}</p>
+  <p class="text-left blogDescTwo">{{description}}</p>
 </div>
 
-//section for if logged in to leave a comment
-{{#if logged_in}}
-<div class="container">
+<div class="container mt-5">
+  <h4>Comments</h4>
+  <ul class="list-group">
+    {{#each comments}}
+    <li class="list-group-item">
+      <p>{{comment_description}}</p>
+    </li>
+    {{/each}}
+  </ul>
 
+  <div id="comment-container">
+    <form id="comment-form" class="mt-4" data-blogid={{id}}>
+      <div class="form-group">
+        <label for="commentInput">Leave a Comment</label>
+        <textarea class="form-control" id="comment-input" name="comment_description" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 </div>
-{{/if}}
-//section comments on post 
 
-<script src="js/comments.js"></script>
+{{!-- <script src="/js/logout.js"></script> --}}
+<script src="/js/commentsp.js"></script>

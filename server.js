@@ -30,10 +30,7 @@ const sess = {
 };
 
 app.use(session(sess));
-// app.use(withAuth);
-// app.use('/js', express.static('js'));
 
-// Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
