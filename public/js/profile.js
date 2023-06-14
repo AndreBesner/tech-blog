@@ -28,10 +28,10 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/projects/${id}`, {
+    if (event.target.hasAttribute('data-blogid')) {
+      const id = event.target.getAttribute('data-blogid');
+
+      const response = await fetch(`/api/blogs/${id}`, {
         method: 'DELETE',
       });
   
@@ -48,4 +48,8 @@ const delButtonHandler = async (event) => {
   .querySelector('#new-blog')
   .addEventListener('submit', newFormHandler);
 
-  document.querySelectorAll(".delete-blog").addEventListener('click', delButtonHandler);
+  // document.querySelector("#delete-blog").addEventListener('click', delButtonHandler);
+  const delButtons = document.querySelectorAll(".delete-blog");
+delButtons.forEach(button => {
+  button.addEventListener('click', delButtonHandler);
+});

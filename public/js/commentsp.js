@@ -16,14 +16,13 @@ const commentFormHandler = async (event) => {
 	
 		if (response.ok) {
 		//   document.location.replace('/');
-		console.log("comment posted");
 		document.location.reload();
 		} else {
 		  alert(response.statusText);
 		}
 	  }
 	  else{
-		alert("bad day");
+		alert("You have to say something!");
 	  }
 };
 
