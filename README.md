@@ -21,6 +21,8 @@ Navigate to:
 
 https://whispering-earth-51152.herokuapp.com/
 
+![Photo of site](./images/Working%20Site.JPG)
+
 No additional instructions if you navigate to hosted URL.
 
 If you are hosting locally:
