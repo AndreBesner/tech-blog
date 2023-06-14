@@ -20,6 +20,7 @@
     {{/each}}
   </ul>
 
+  {{#if logged_in}}
   <div id="comment-container">
     <form id="comment-form" class="mt-4" data-blogid={{id}}>
       <div class="form-group">
@@ -30,6 +31,7 @@
     </form>
   </div>
 </div>
+{{/if}}
 
 {{!-- <script src="/js/logout.js"></script> --}}
 <script src="/js/commentsp.js"></script>
