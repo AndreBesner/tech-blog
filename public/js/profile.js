@@ -43,11 +43,7 @@ const delButtonHandler = async (event) => {
     }
   };
 
-  // const blogName = document.querySelector('#blog-title').value.trim();
-  // const blogBody = document.querySelector('#blog-contents').value.trim();
 
-
-  // query selector and event listener for add new blog to run above function
   document
   .querySelector('#new-blog')
   .addEventListener('submit', newFormHandler);

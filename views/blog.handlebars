@@ -1,7 +1,3 @@
-
-
-
-
 <div class="container mt-5">
   <div class="row headerRow">
     <div class="col-8">
@@ -14,4 +10,26 @@
   <p class="text-left blogDescTwo">{{description}}</p>
 </div>
 
-<script src="js/logout.js"></script>
+<div class="container mt-5">
+  <h4>Comments</h4>
+  <ul class="list-group">
+    {{#each comments}}
+    <li class="list-group-item">
+      <p>{{comment_description}}</p>
+    </li>
+    {{/each}}
+  </ul>
+
+  <div id="comment-container">
+    <form id="comment-form" class="mt-4" data-blogid={{id}}>
+      <div class="form-group">
+        <label for="commentInput">Leave a Comment</label>
+        <textarea class="form-control" id="comment-input" name="comment_description" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+{{!-- <script src="/js/logout.js"></script> --}}
+<script src="/js/commentsp.js"></script>
